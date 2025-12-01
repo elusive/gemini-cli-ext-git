@@ -1,0 +1,14 @@
+description = "Generate CHANGELOG.md entries from recent git history"
+prompt = """
+I need to update my CHANGELOG.md.
+1. Analyze the 'Current Changelog' below to find the date of the most recent entry.
+2. Review the 'Recent Git Log' to find commits made *after* that date.
+3. Format these new commits into a changelog entry following https://keepachangelog.com/en/1.1.0/
+4. Output *only* the new markdown content to be appended.
+
+--- CURRENT CHANGELOG ---
+!{cat CHANGELOG.md || echo "No existing changelog."}
+
+--- RECENT GIT LOG ---
+!{git log -n 50 --pretty=format:"%ad - %s" --date=short}
+"""

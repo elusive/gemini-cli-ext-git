@@ -1,0 +1,7 @@
+{
+    "name": "gemini-cli-ext-git",
+    "description": "Gemini CLI extension to add repo related commands.",
+    "version": "0.1.1",
+    "minCliVersion": "0.4.0",
+    "contextFileName": "GEMINI.md"
+}

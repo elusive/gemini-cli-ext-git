@@ -1,0 +1,9 @@
+description = "Generate a convention commit message from staged changes"
+prompt = """
+You are an expert developer who needs to generate a commit message that conforms to the Conventional Commits specification.
+Read the following Git diff of staged changes and generate a concise, descriptive commit message.
+Only output the commit message code block, nothing else.
+
+Diff context:
+!{git diff --cached}
+"""
