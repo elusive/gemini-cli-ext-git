@@ -4,10 +4,37 @@ I need to update my CHANGELOG.md.
 1. Analyze the 'Current Changelog' below to find the date of the most recent entry.
 2. Review the 'Recent Git Log' to find commits made *after* that date.
 3. Format these new commits into a changelog entry following https://keepachangelog.com/en/1.1.0/
+
+** Guidelines from KeepAChangeLog**
+
+## [1.2.0] - 2025-11-30:  This line indicates the version number 
+and the release date. The version number is typically enclosed in 
+square brackets for clarity and often linked to a corresponding tag 
+or release on platforms like GitHub.
+
+### Added
+- New feature: Implemented user authentication with OAuth2.
+- Added support for dark mode in the user interface.
+
+### Changed
+- Improved performance of data loading by optimizing database queries.
+- Updated styling of navigation bar for better responsiveness on mobile devices.
+
+### Fixed
+- Resolved issue where certain reports were not generating correctly.
+- Fixed a bug causing occasional crashes when uploading large files.
+description
+
+### Removed (Optional)
+- This section would list any features or functionalities that have been removed.
+
+### Deprecated (Optional)
+- This section would note any features that are still available but are planned for removal in future versions.
+
 4. Output *only* the new markdown content to be appended.
 
 --- CURRENT CHANGELOG ---
-!{cat CHANGELOG.md || echo "No existing changelog."}
+!{cat CHANGELOG.md}
 
 --- RECENT GIT LOG ---
 !{git log -n 50 --pretty=format:"%ad - %s" --date=short}
